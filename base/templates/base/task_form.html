@@ -1,0 +1,21 @@
+{%extends 'base/main.html'%}
+{%block content%}
+
+<div class="header-bar">
+    <a href="{% url 'tasks'%}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form method="POST" action="">
+        <!-- for unique user -->
+        {% csrf_token %} 
+    
+        <!-- form created by django for us in create view -->
+        {{form.as_p}} 
+        <input class="button" type="submit" name="" value="Submit">
+    </form>
+</div>
+
+
+
+{%endblock content%}
